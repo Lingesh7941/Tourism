@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Travel Booking Form -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Book Your Trip</h2>
+    <form action="BookTravelServlet" method="post" class="p-4 border rounded shadow-sm bg-light">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="fullName" class="form-label">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+            <div class="col-md-6">
+                <label for="state" class="form-label">State:</label>
+                <select id="state" name="state" class="form-select" required>
+                    <option value="">Choose State</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="district" class="form-label">District:</label>
+                <select id="district" name="district" class="form-select" required>
+                    <option value="">Choose District</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="noOfPeople" class="form-label">Number of People:</label>
+                <input type="number" id="noOfPeople" name="noOfPeople" class="form-control" placeholder="Enter the number of people" required>
+            </div>
+        </div>
+
+        <!-- Travel and Return Dates -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="travelDate" class="form-label">Travel Date:</label>
+                <input type="date" id="travelDate" name="travelDate" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="returnDate" class="form-label">Return Date:</label>
+                <input type="date" id="returnDate" name="returnDate" class="form-control" required>
+            </div>
+        </div>
+
+        <!-- Activities -->
+        <div class="mb-3">
+            <label class="form-label">Activities (Optional):</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="hillClimbing" name="activities" value="Hill Climbing">
+                <label class="form-check-label" for="hillClimbing">Hill Climbing</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="CampFire" name="activities" value="CampFire">
+                <label class="form-check-label" for="candleDinner">CampFire</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="Boating" name="activities" value="Boating">
+                <label class="form-check-label" for="safari">Boating</label>
+            </div>
+        </div>
+
+        <!-- Total Price -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="totalPrice" class="form-label">Total Price:</label>
+                <input type="number" id="totalPrice" name="totalPrice" step="0.01" class="form-control" placeholder="Total package price" required readonly>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Book Now</button>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript to Auto-Calculate Total Price and State-District Mapping -->
+<script>
+    document.getElementById('noOfPeople').addEventListener('input', calculateTotalPrice);
+    document.getElementById('travelDate').addEventListener('change', calculateTotalPrice);
+    document.getElementById('returnDate').addEventListener('change', calculateTotalPrice);
+    document.getElementById('state').addEventListener('change', updateDistricts);
+
+    function calculateTotalPrice() {
+        var noOfPeople = parseInt(document.getElementById('noOfPeople').value) || 0;
+        var travelDate = new Date(document.getElementById('travelDate').value);
+        var returnDate = new Date(document.getElementById('returnDate').value);
+        
+        // Calculate number of days
+        var timeDiff = returnDate - travelDate;
+        var noOfDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert time to days
+        
+        if (noOfDays < 0) {
+            noOfDays = 0; // Prevent negative days
+        }
+
+        var pricePerPerson = 5000; // Default price
+
+        // Calculate total price based on number of days
+        var totalPrice = noOfPeople * pricePerPerson * noOfDays;
+        document.getElementById('totalPrice').value = totalPrice;
+    }
+
+    function updateDistricts() {
+        var state = document.getElementById('state').value;
+        var districtSelect = document.getElementById('district');
+        
+        // Clear existing options
+        districtSelect.innerHTML = '<option value="">Choose District</option>';
+
+        // District mapping based on selected state
+        var districts = {
+            'Tamil Nadu': ['Chennai', 'Coimbatore', 'Madurai', 'Trichy'],
+            'Kerala': ['Thiruvananthapuram', 'Kochi', 'Kozhikode'],
+            'Karnataka': ['Bangalore', 'Mysore', 'Mangalore'],
+            'Andhra Pradesh': ['Visakhapatnam', 'Vijayawada', 'Guntur'],
+            'Maharashtra': ['Mumbai', 'Pune', 'Nagpur']
+        };
+
+        if (state in districts) {
+            districts[state].forEach(function(district) {
+                var option = document.createElement('option');
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+        }
+    }
+</script>
+</body>
+</html>

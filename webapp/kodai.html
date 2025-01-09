@@ -1,0 +1,416 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="tyu.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Card Slider</title>
+      
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <title>one</title>
+    </head>
+    <section class="popular" id="destination">
+        <div class="container">
+  
+          <p class="section-subtitle">Uncover place in Kodaikanal</p>
+  
+          <h2 class="h2 section-title">Popular destination</h2>
+  
+          <!-- <p class="section-text">
+            Kerala is always referred to as God's own country. This term has a mythological belief that states that- Lord Parshuram
+            a manifestation of Lord Vishnu threw his axe into the vast sea to develop land for his followers to reside peacefully
+          </p> -->
+  
+          <ul class="popular-list">
+  
+            <li>
+              <div class="popular-card">
+  
+                <figure class="card-img">
+                  <img decoding="async" src="https://www.muthutourism.com/img/placevisit/large/kurinjiandavartemple1.jpg" alt="Kurinji Andavar Temple " loading="lazy">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <div class="card-rating">
+                  </div>
+  
+                  <p class="card-subtitle">
+                    <a href="#">Kodaikanal</a>
+                  </p>
+  
+                  <h3 class="h3 card-title">
+                    <a href="#">Kurinji Andavar Temple </a>
+                  </h3>
+  
+                  <!-- <p class="card-text">
+                    It was the British who coined the name 'Silent Valley' in 1847.
+                    <a href="">Gallery</a>
+                  </p> -->
+  
+                </div>
+  
+              </div>
+            </li>
+  
+            <li>
+              <div class="popular-card">
+  
+                <figure class="card-img">
+                  <img decoding="async" src="data:image/jpeg;base64,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" alt="Silver cascade falls" loading="lazy">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <div class="card-rating">
+  
+                  </div>
+  
+                  <p class="card-subtitle">
+                    <a href="#">Kodaikanal</a>
+                  </p>
+  
+                  <h3 class="h3 card-title">
+                    <a href="#">Silver cascade falls</a>
+                  </h3>
+  
+                  <!-- <p class="card-text">
+                    Thrissur is  also referred as VRISHABHADRIPURAM” and “TEN KAILASAM
+                  </p> -->
+  
+                </div>
+  
+              </div>
+            </li>
+  
+            <li>
+              <div class="popular-card">
+  
+                <figure class="card-img">
+                  <img decoding="async" src="https://www.trawell.in/blog/wp-content/uploads/2021/03/Kodai_Lake_Main.jpg" alt="Kodaikanal Lake" loading="lazy">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <div class="card-rating">
+  
+  
+  
+  
+  
+                  </div>
+  
+                  <p class="card-subtitle">
+                    <a href="#">Kodaikanal</a>
+                  </p>
+  
+                  <h3 class="h3 card-title">
+                    <a href="#">Kodaikanal Lake</a>
+                  </h3>
+<!--   
+                  <p class="card-text">
+                    Its beach is famous for its natural springs which are said to have medicinal qualities.
+                  </p> -->
+  
+                </div>
+  
+              </div>
+            </li>
+  
+          </ul>
+          <ul class="popular-list">
+  
+            <li>
+              <div class="popular-card">
+  
+                <figure class="card-img">
+                  <img decoding="async" src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSRqP5i6MCchdk2fP2Gat7jQPLx-7hmAj0LBEawQlnvaKeNMSb5MDEmt7E_-BWN6o_3xEoittN6aSd--EOOhmq_hD3pPsZ1GVSvBdDuWg" alt="Pykara Waterfalls" loading="lazy">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <div class="card-rating">
+                  </div>
+  
+                  <p class="card-subtitle">
+                    <a href="#">Kodaikanal</a>
+                  </p>
+  
+                  <h3 class="h3 card-title">
+                    <a href="#">Pykara Waterfalls</a>
+                  </h3>
+  
+                  <!-- <p class="card-text">
+                    Pine trees have some special adaptations that make them resistant to wildfires.
+                  </p> -->
+  
+                </div>
+  
+              </div>
+            </li>
+  
+            <li>
+              <div class="popular-card">
+  
+                <figure class="card-img">
+                  <img decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnECDZhrrIY1zWjE66NiLtfQ50woqm0EL-9g&s" alt="Pillar Rocks Road" loading="lazy">
+                </figure>
+  
+                <div class="card-content">
+  
+                  <div class="card-rating">
+  
+  
+  
+  
+  
+                  </div>
+  
+                  <p class="card-subtitle">
+                    <a href="#">Kodaikanal</a>
+                  </p>
+  
+                  <h3 class="h3 card-title">
+                    <a href="#">Pillar Rocks Road</a>
+                  </h3>
+  
+                  <p class="card-text">
+                    <!-- To Save The Tiger -->
+                  </p>
+  
+                </div>
+  
+              </div>
+            </li>
+  
+            <li>
+              <div class="popular-card">
+  
+                <figure class="card-img">
+
+                <img decoding="async" src="https://www.holidify.com/images/cmsuploads/compressed/Dolphin_Nose,_Kodaikanal_20180220160152.jpg" alt="Dolphin Nose" loading="lazy">
+            </figure>
+                <div class="card-content">
+  
+                  <div class="card-rating">
+  
+                  </div>
+  
+                  <p class="card-subtitle">
+                    <a href="#">Kodaikanal</a>
+                  </p>
+  
+                  <h3 class="h3 card-title">
+                    <a href="#">Dolphin Nose</a>
+                  </h3>
+  
+                  <!-- <p class="card-text">
+                    Alappuzha, famous for its boat races, beaches, marine products and coir 
+                    industry,is a world renowned backwater tourist destination of India
+                  </p> -->
+  
+                </div>
+  
+              </div>
+            </li>
+  
+          </ul>
+
+
+
+
+<!-- 
+<head>
+  <!-- <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Card Slider</title>
+
+  <!-- Swiper CSS -->
+  <!-- CSS -->
+
+<link rel="stylesheet" href="muncs.css">
+  <div class="slide-container swiper">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper">
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="https://lh5.googleusercontent.com/p/AF1QipMynV6xgcxfWOk8QaId96KL9bC60btRVVajIKVX=w253-h182-k-no" alt="Hotel Emerald Inn" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">Hotel Emerald Inn</h2>
+            <!-- <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p> -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.44 12.44 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049"/>
+                <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+              </svg>wifi
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipM9x-AjlQTmV0-oe4pXevo1M2JTUP6oh6n5UsDe=w287-h192-n-k-rw-no-v1" alt="Grand Valley Resort Munnar" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">Grand Valley Resort Munnar</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile3.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile4.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile5.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile6.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile7.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile8.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="images/profile9.jpg" alt="" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">David Dell</h2>
+            <p class="description">The lorem text the section that contains header with having open functionality. Lorem
+              dolor sit amet consectetur adipisicing elit.</p>
+
+            <button class="button">View More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+</body>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script src="muuunj.js"></script>
+
+        
+    
+        </body>
+</html>

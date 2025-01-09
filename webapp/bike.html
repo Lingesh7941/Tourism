@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="HTML,CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWS PROJECT TEAM-8</title>
+  <style>
+   
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+   
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+      
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+    }
+    .see{
+        display: block;
+        align-items: last baseline;
+        background-color: #000;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://wallpapercave.com/wp/wp1887210.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    :hover intro{
+        background-color: yellow;
+        cursor: auto;
+
+    }
+ 
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+    .intro a{
+        background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .name{
+        margin: 20px 10px;
+        text-align: center;
+        word-spacing: 4px;
+        font-size: larger;
+        text-decoration: none;
+
+
+    }
+    .vl{
+        border-left: 3px solid green;
+  height: 18px;
+ position: absolute;
+  left: 32.70%;
+  margin-left: 5px;
+    }
+    .v2{
+ border-left: 3px solid green;
+  height: 20px;
+ position:absolute;
+  left: 38.70%;
+  margin-right: 5px;
+  padding: 2px;
+
+    }
+    .v3{
+ border-right: 3px solid green;
+  height: 20px;
+ position:absolute;
+  left: 45.90%;
+  margin-right: 5px;
+
+    }
+    .v4{
+ border-right: 3px solid green;
+  height: 20px;
+ position:absolute;
+  left: 64.20%;
+  margin-right: 5px;
+
+    }
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+    .mm{
+     padding: 2px;
+     text-align: center;
+     justify-content: center;
+     margin: 3px;
+    }
+   
+
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    body {
+            font-family: Arial, sans-serif;
+        }
+        .product {
+            border: 1px solid #ddd;
+            margin: 10px;
+    
+        }
+        #cart {
+            border: 1px solid #333;
+            padding: 10px;
+            margin: 10px;
+        }
+    
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <marquee behavior="slide" direction="right">
+      <img src="c:\Users\admin\Downloads\logo hhh" height="30%" width="20%"  />
+    </marquee>
+      <a href="#">Home</a>
+      <a href="https://www.instagram.com/p/CvVEWHKpewu/?igshid=MzRlODBiNWFlZA==">&nbsp;About</a>
+      <a href="https://www.harley-davidson.com/in/en/motorcycles/x-440.html"target="_blank">&nbsp;Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Harley-Davidson</h1>
+      <p>Since 1903</p>
+      <a href="https://www.bikewale.com/harleydavidson-bikes/"target="_blank">LEARN MORE</a><br>
+      <div class="see">
+      <a href="https://www.harley-davidson.com/in/en/motorcycles/x-440.html"target="_blank">SEE THE BIKE</a></div><br>
+      <!-- <button>Learn More <link rel="stylesheet" href=""></button> -->
+    </div>
+    <div class="name">
+       <div class="vl"></div> <div class="v2"></div>  <div class="v3"></div> <div class="v4"></div><a style="text-decoration:none" href="https://www.harley-davidson.com/in/en/motorcycles/h-d-x.html" >Harley-DavidsonX &nbsp; </a> 
+       <a style="text-decoration:none" href="https://www.harley-davidson.com/in/en/motorcycles/sport.html"> &nbsp; SPORT </a>
+       <a style="text-decoration:none" href="https://www.harley-davidson.com/in/en/motorcycles/cruiser.html"> &nbsp;CRUISER</a>
+        <a style="text-decoration:none" href="https://www.harley-davidson.com/in/en/motorcycles/touring.html"> &nbsp;GRAND AMERICAN TOURING</a>
+        <a style="text-decoration:none" href="https://www.harley-davidson.com/in/en/motorcycles/adventure-touring.html"> &nbsp;ADVENTURE TOURING</a>
+    </div>
+    <div class="achievements">
+      <div class="work">
+        <i class="fas fa-atom"></i>
+        <p class="work-heading">Started</p>
+        <p class="work-text">Company started on 1903.<br>Located at Milwaukee,Wisconsin,United States</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-skiing"></i>
+        <p class="work-heading">Launched In India</p>
+        <p class="work-text">In August 2009, Harley-Davidson launched Harley-Davidson India and started selling motorcycles there in 2010.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-ethernet"></i>
+        <p class="work-heading">What's New</p>
+        <p class="work-text">Harley-Davidson ’s upcoming, made-in-India motorcycle has been seen in spy images ahead of its launch soon. Developed in collaboration with Hero MotoCorp, this motorcycle will be Harley-Davidson’s new entry-level model</p>
+      </div>
+    </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>Founders</h2>
+        <p>A common question is whether or not Harley-Davidson is a person. It’s actually four people. William Harley was only a year older than Arthur Davidson. The two boys grew up just a couple of houses apart in Milwaukee, Wisconsin. Such was the start of their lifelong friendship. Both boys were enamored with bicycles.
+        <h5><h4>Founders Name:</h4>William S.Harley,William A.Davidson,Arthur Davidson,Walter Davidson.</p></h5>
+      </div>
+      <img src="https://images.fosterwebmarketing.com/hupy.com/800px-Founders_of_Harley-Davidson_The_North_Shore_Bulletin_Dec_1920.jpg"><br>
+    </div>
+    <img src="https://i.pinimg.com/originals/85/83/0a/85830ada7f1c96eb62ec3ebd047cad3f.jpg">
+    <h1 style="text-decoration:underline;">Harley-Davidson Demo Videos:</h1>
+    <table class="mm">
+<tr>
+    <td><a href="https://youtube.com/shorts/uGZM7AN54rw?feature=share"target="blank"><h2>STREET 750</h2></a></td>
+    <td><a href="https://youtube.com/shorts/wLeFNyfpRms?feature=share"target="blank"><h2>STREET V ROD</h2></a></td>
+    <td><a href="https://youtube.com/shorts/y7R-9_C-Opg?feature=share"target="blank"><h2>IRON 883</h2></a></td>
+    <td><a href="https://youtube.com/shorts/UakBMd-MdPI?feature=share"target="blank"><h2>1200 CUSTOM</h2></a></td>
+</tr>
+<tr>
+   <td> <a href="https://youtube.com/shorts/zt8T-wIu6K8?feature=share"target="blank"><h2>FORTY-EIGHT</h2></a></td>
+   <td> <a href="https://youtube.com/shorts/aXlSoxGYb9Q?feature=share"target="blank"><h2>ROADSTER</h2></a></td>
+   <td><a href="https://youtube.com/shorts/6MEnx-8130w?feature=share"target="blank"><h2>STREET BOB</h2></a></td>
+   <td><a href="https://youtube.com/shorts/QXXdk-nYT7o?feature=share"target="blank"><h2>FAT BOB</h2></a></td>
+</tr>
+<tr>
+    <td><a href="https://youtube.com/shorts/zWsKC_PtAqI?feature=share"target="blank"><h2>FAT BOY</h2></a></td>
+    <td><a href="https://youtube.com/shorts/pmNthn8aPU0?feature=share"target="blank"><h2>HARITAGE CLASSIC</h2></a></td>
+    <td><a href="https://youtube.com/shorts/vzRXXFe08Ts?feature=share"target="blank"><h2>ROAD KING</h2></a></td>
+    <td><a href="https://youtube.com/shorts/ClG3SP8aBmc?feature=share "target="blank"><h2>STREET GLIDE</h2></a></td>
+</tr>
+<tr>
+    <td> <a href="https://youtube.com/shorts/ow9DbH01LuE?feature=share"target="blank"><h2>ROAD GLIDE</h2></a></td>
+    <td><a href="https://youtube.com/shorts/wEljdgFHgfo?feature=share "target="blank"><h2>CVO LIMITED</h2></a></td>
+</tr>
+   
+    <table >
+        <tr>
+   <td> <div class="product">
+    <h3>cruiser</h3>
+        <img src="c:\Users\admin\Downloads\cruysier - Copy.jpg">
+        <p>Price: $10,000</p>
+        <button onclick="addToCart('Product 1', 10000)">Add to Cart</button></td>
+    </div>
+
+    <td><div class="product">
+      <h3>FAT BOY</h3>
+       <img src="c:\Users\admin\Downloads\fat-boy - Copy (1).jpg">
+        <p>Price: $20,000</p>
+        <button onclick="addToCart('Product 2', 20000)">Add to Cart</button></td>
+    </div>
+    
+   <td> <div class="product">
+    <h3>SPORT</h3>
+        <img src="c:\Users\admin\Downloads\sport1.jpg">
+         <p>Price: $30,000</p>
+         <button onclick="addToCart('Product 2', 30000)">Add to Cart</button></td>
+     </div>
+        <td> <div class="product">
+          <h3>STREET 40,000</h3>
+             <img src="c:\Users\admin\Downloads\s111.jpg">
+             <p>Price: $40,000</p>
+             <button onclick="addToCart('Product 1', 40000)">Add to Cart</button></td>
+         </div></tr>
+         <tr>
+            <td> <div class="product">
+              <h3>sofatali</h3>
+                <img src="c:\Users\admin\Downloads\softail.jpg">
+                <p>Price: $50,000</p>
+                <button onclick="addToCart('Product 1', 50000)">Add to Cart</button></td>
+            </div>
+            <td> <div class="product">
+              <h3>HERITAGE CLASSIC</h3>
+                <img src="c:\Users\admin\Downloads\class">
+                <p>Price: $60,000</p>
+                <button onclick="addToCart('Product 1', 60000)">Add to Cart</button></td>
+            </div>
+            <td> <div class="product">
+              <h3>CVO</h3>
+                <img src="c:\Users\admin\Downloads\CVO.jpg">
+                <p>Price: $76,000</p>
+                <button onclick="addToCart('Product 1', 76000)">Add to Cart</button></td>
+            </div>
+            <td> <div class="product">
+              <h3>ROAD GLIDE</h3>
+                <img src="c:\Users\admin\Downloads\ROAD GLIDE.jpg">
+                <p>Price: $99,000</p>
+                <button onclick="addToCart('Product 1', 99000)">Add to Cart</button></td>
+            </div>
+          
+
+         </tr>
+    </table>
+    </table>
+
+    <div id="cart">
+        <h3 style="color: goldenrod;">Shopping Cart</h3>
+        <ul id="cartItems">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <p style="color: red;">TOTAL AMOUNT: $<span id="totalAmount">0</span></p>
+    </div>
+    <button style="color:purple; float:inline-end;"  onclick="redirectToPhonePe()">Pay with PhonePe</button><br>
+    <br>
+  <footer class="footer">
+    <div class="copy">&copy;MY First Website</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="https://www.instagram.com/p/CvVEWHKpewu/?igshid=MzRlODBiNWFlZA==">About</a>
+        <a href="https://instagram.com/_dinesh2004_?igshid=NGExMmI2YTkyZg=="target="_blank">Contact</a>
+      </div>
+    </div>
+</main>
+
+  </footer>
+</body>
+
+<script>
+    function redirectToPhonePe() {
+        // Replace 'your_phonepe_payment_link' with the actual payment link generated from PhonePe.
+        const phonePePaymentLink = 'https://trade.share.market/login?from=%2F';
+
+        // Redirect the user to the PhonePe payment page.
+        window.location.href = phonePePaymentLink;
+    }
+</script>
+    <script>
+        const cart = [];
+        let totalAmount = 0;
+
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            totalAmount += itemPrice;
+            
+            // Update the cart display
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItems');
+            const totalAmountElement = document.getElementById('totalAmount');
+            
+            // Clear the current cart items
+            cartItemsList.innerHTML = '';
+
+            // Add the updated cart items
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price}`;
+                cartItemsList.appendChild(listItem);
+            });
+
+            // Update the total amount
+            totalAmountElement.textContent = totalAmount;
+        }
+    </script>
+</body>
+</html>
+
+
+

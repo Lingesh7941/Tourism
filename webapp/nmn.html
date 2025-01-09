@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="">
+    
+</head>
+<body>
+
+    <div class="landing">
+           <header><a href="index.html"id="logo"><h2><i class="fa-solid fa-bowl-rice"></i>Spicy Hut</h2></a>
+            <nav>
+                <a href="#starRating"><i class="fa-regular fa-face-smile"></i>Ratings</a>
+                <a href="#menu"><i class="fa-solid fa-bars"></i>Menu</a>
+                <a href="#locheading"><i class="fa-solid fa-location-dot"></i>Location</a>
+                
+            </nav>
+        </header>
+        <div class="container">
+            <h1>Recipe Management</h1>
+            <div id="recipeForm" style="display: none;">
+                <input type="text" id="recipeName" placeholder="Enter Recipe Name">
+                <textarea id="recipeDescription" placeholder="Enter Recipe Description"></textarea>
+                <button id="saveRecipeButton" onclick="saveRecipe()">Save Recipe</button>
+                <button id="updateRecipeButton" onclick="updateRecipe()">Update Recipe</button>
+                <button id="cancelButton" onclick="cancel()">Cancel</button>
+            </div>
+            <button id="addRecipeButton" onclick="showForm()">Add Recipe</button>
+            <ul id="recipeList"></ul>
+        </div>
+    
+        <script src="project.js"></script>
+    <div class="maintext">
+        <div class="tagline1">
+            Finest treat for your taste
+        </div>
+        <div class="tagline2">
+            Freshest Incredients Garunteed
+        </div>
+    <div class="Call us">Call us @+91 9876543210</div>
+    <button>Order Online</button>
+    </div>
+</div>
+    <h2 id="menu">Menu</h2>
+    <div class="Menu">
+        <div class="starters">
+            <table>
+                <th colspan="2">Starters</th>
+                <tr>
+                    <td>Panner Tikka</td>
+                    <td>&#8377 180</td>
+                </tr>
+                <tr>
+                    <td>Gobi 65</td>
+                     <td>&#8377 165</td> 
+                </tr>
+                <tr>
+                    <td>Veg Pakoda</td>
+                    <td>&#8377 160</td>
+                </tr>
+
+                <tr>
+                    <td>Mirchi Bajji</td>
+                     <td>&#8377 155</td> 
+                </tr>
+                <tr>
+                    <td>Chilli Gobi</td>
+                     <td>&#8377 170</td> 
+                </tr>
+                <tr>
+                    <td>Baby Corn Manchurian</td>
+                     <td>&#8377 185</td> 
+                </tr>
+                <tr>
+                    <td>Chill Panner</td>
+                     <td>&#8377 190</td> 
+                </tr>
+            </table>
+        </div>
+        <div class="maincourse">
+            <table>
+                <th colspan="2">Main Course</th>
+                <tr>
+                    <td>Veg Fried Rice</td>
+                    <td>&#8377 180</td>
+                </tr>
+                <tr>
+                    <td>Schezwan Fried Rice</td>
+                     <td>&#8377 165</td> 
+                </tr>
+                <tr>
+                    <td>Veg Briyani</td>
+                    <td>&#8377 160</td>
+                </tr>
+
+                <tr>
+                    <td>Panner Briyani</td>
+                     <td>&#8377 155</td> 
+                </tr>
+                <tr>
+                    <td>Mushroom Briyani</td>
+                     <td>&#8377 170</td> 
+                </tr>
+                <tr>
+                    <td>Veg Noodles </td>
+                     <td>&#8377 185</td> 
+                </tr>
+                <tr>
+                    <td>Schezwan Noodles</td>
+                     <td>&#8377 190</td> 
+                </tr>
+                <tr>
+                    <td>Veg Pulau</td>
+                     <td>&#8377 170</td> 
+                </tr>
+                <tr>
+                    <td>Kashmir Pulau</td>
+                     <td>&#8377 150</td> 
+                </tr>
+                <tr>
+                    <td>Sambar Rice</td>
+                     <td>&#8377 140</td> 
+                </tr>
+                <tr>
+                    <td>Curd Rice</td>
+                     <td>&#8377 120</td> 
+                </tr>
+            </table>
+        </div>
+        <div class="chats">
+            <table>
+                <th colspan="2">Chats</th>
+                <tr>
+                    <td>Samosa</td>
+                    <td>&#8377 80</td>
+                </tr>
+                <tr>
+                    <td>Pani Poori</td>
+                     <td>&#8377 65</td> 
+                </tr>
+                <tr>
+                    <td>Masal Poori</td>
+                    <td>&#8377 60</td>
+                </tr>
+
+                <tr>
+                    <td>Paw Baaji</td>
+                     <td>&#8377 55</td> 
+                </tr>
+                <tr>
+                    <td>Vada Poori</td>
+                     <td>&#8377 70</td> 
+                </tr>
+                <tr>
+                    <td>Raj Kachori-BestSeller</td>
+                     <td>&#8377 80</td> 
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <h2 id="locheading">Locations</h2>
+    <div class="locations">
+    <div Class="annanagar">
+        <h2>Anna Nagar</h2>
+        <address>
+            15,10th Main Road</br>
+            Anna Nagar,</br>
+            Channai - 680102
+        </address>
+    </div>
+    <div Class="Velachery">
+        <h2>Velachery</h2>
+        <address>
+            5,1th Main Road</br>
+            Velachery,</br>
+            Channai - 600042
+        </address>
+    </div>
+    <div Class="Tambaram">
+        <h2>Tambaram</h2>
+        <address>
+            1,6th Cross Road</br>
+            Tambaram,</br>
+            Channai - 600092
+        </address>
+    </div>
+    </div>
+    
+    <footer><div id="copyright">&#169 CopyRight Spicy Hut</div>
+    </footer>
+    <div class="Star">
+    <div class="star-rating" id="starRating">
+        <h3>Ratings...</h3>
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <p id="ratingValue"></p>
+      
+      <textarea id="commentBox" placeholder="Write your comment here"></textarea>
+      <button onclick="submitRating()">Submit</button>
+      
+     <div id="submittedRatings"></div>
+   </div>
+    
+    
+    
+    
+    
+</body>
+</html>
